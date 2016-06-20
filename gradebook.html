@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <title>Grade Submission App</title>
+    
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/agency.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+
+<body id="page-top" class="index">
+
+    <style type="text/css">
+        header{background-image:url("img/apple.jpg");
+            text-color: #000;
+        }
+        .gradebooktablediv{
+            padding-left: 150px;
+            padding-right: 150px;
+            padding-bottom: 25px;
+            
+        }
+        #overallgrade{
+            text-align: center;
+        }
+        .btn{
+            background-color: #BD2031;
+            color:white;
+            margin-bottom: 20px;
+            float: right;   
+        }
+        .submit{
+            background-color: #BD2031;
+            margin-top: 10px;
+            color:white; 
+        }
+
+    </style>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="index.html">AIP Grade Submission</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#gradebook">Gradebook</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#statistics">Statistics</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">Course 1</div>
+                <div class="intro-heading">Estimated Grade<br>91.3%</div>
+                <a href="#gradebook" class="page-scroll btn btn-xl">View your gradebook</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- gradebook Section -->
+    <section id="gradebook">
+        <div id="overallgrade">
+            <h1>Estimated Grade</h1>
+            <h2>84%</h2>
+        </div>
+        <div class=gradebooktablediv>
+                <h2>Homework</h2>
+                <h3>60%</h3>
+         <table class="table table-bordered table-striped">
+                
+                        <button type="submit" class="btn" data-toggle="modal" data-target="#myModal">Add an assignment
+
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </button>
+                
+                <!-- Modal -->
+                <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add Assignment For "Homework"</h4>
+            </div>
+            <div class="modal-body">
+                <p>Please fill in the following.</p>
+                <form action="#">
+                    <label for="assignmentnameinput">Assignment Name:</label>
+                    <input type="text" class="form-control" id="assignmentnameinput">
+                    <label for="assignmentearnedinput">Points Earned:</label>
+                    <input type="text" class="form-control" id="assignmentearnedinput">
+                    <label for="assignmentoutofinput">Out of:</label>
+                    <input type="text" class="form-control" id="assignmentoutofinput">
+                    <center><button class="submit">Submit</button></center>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+  </div>
+</div>
+
+            <thead>
+            <tr>
+                <th>Assignment Name</th>
+                <th>Weight</th>
+                <th>Grade</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Homework 1</td>
+                <td>3/7</td>
+                <td>42.9%</td>
+            </tr>
+            <tr>
+                <td>Homework 2</td>
+                <td>4/5</td>
+                <td>80%</td>
+            </tr>
+            <tr>
+                <td>Homework 3</td>
+                <td>2/3</td>
+                <td>66.7%</td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+
+        <div class=gradebooktablediv>
+        <h2>Tests</h2>
+        <h3>72%</h3>
+         <table class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th>Assignment Name</th>
+                <th>Weight</th>
+                <th>Grade</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Test 1</td>
+                <td>45/50</td>
+                <td>90%</td>
+            </tr>
+            <tr>
+                <td>Test 2</td>
+                <td>49/50</td>
+                <td>98%</td>
+            </tr>
+            <tr>
+                <td>Test 3</td>
+                <td>50/50</td>
+                <td>100%</td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+    </section>
+
+    <!-- statistics Grid Section -->
+    <section id="statistics" class="bg-light-gray">
+        
+    </section>
+
+    
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/agency.js"></script>
+
+</body>
+
+</html>
